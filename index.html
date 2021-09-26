@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" 
+            content="This is an example of a meta description. This will often show up in search results.">
+        <link rel="stylesheet" href="index.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- search bar display none show through event -->
+        <div class="search_bar_absolute position-absolute mt-5 mx-5 end-0 ">
+            <input class="p-2 px-5 border-1 rounded-0" type="text" placeholder="Enter a word to search">
+        </div>
+        <!-- absolute day and night button goes here -->
+        <div class="dn_btn position-fixed end-0">
+            <div class="img">
+                <img src="https://v1.smallseotools.com/webimages/day_mode.svg" alt="day night">
+            </div>
+            <div class="dn_text">Light Mode</div>
+            <div class="slider border" onclick="daynight()">
+                <div class="round"></div>
+            </div>
+        </div>
+        <!-- nav bar goes here -->
+        <div class="container-fluid px-lg-5 border-bottom col" id="navbar_id">
+            <nav class="navbar navbar-expand-lg px-lg-5 py-0">
+                <a class="navbar-brand d-block pb-2 px-lg-5" id="brand_logo"  href="#"><img src="Logo.png" alt="logo" height="31" width="200"></a>
+                <a title="dark mode" href="#"><img class="img_sun" onclick="daynight()" src="https://v1.smallseotools.com/webimages/day_mode.svg" alt="sun">
+                </a> 
+                <a title="user" href="#"><img class="img_user" src="Group 1198.png" alt="user"></a> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_toggle_items" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- nav bar toggler button here -->
+                <div class="collapse navbar-collapse justify-content-end px-lg-5" id="navbar_toggle_items">
+                    <ul class="navbar-nav mr-auto fw-600 text_white">
+                        <li class="nav-Items" onclick="show_tools()"><a href="#" title="all tools"          class="nav-link">All Tools <img onclick="show_tools()" src="https://v1.smallseotools. com/webimages/drop_chevron.svg" alt=""></a></li>
+                        <li class="nav-Items"><a href="#" title="all tools" class="nav-link">About us</a></li>
+                        <li class="nav-Items"><a href="#" title="all tools" class="nav-link">Blog</a></li>
+                        <li class="nav-Items"><a href="#" title="all tools" class="nav-link">Contact us</a></li>
+                        <li class="nav-items" onclick="show_input()"><a href="#" title="all tools" class="nav-link"><img src="https://v1.smallseotools.com/webimages/search.svg" alt="search"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- hide tools shown through event -->
+        <div class="container-fluid">
+            <div class="row position-relative hide_tools position-relative day_night_dark">
+                <div class="col-md-11 p-lg-3 hide_tools position-relative text_white">
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link" href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                    <a title="link"  href="#" class="d-inline-flex justify-content-start p-5 mt-3">
+                    <span class="tools_span"><img src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="icon" width="20" height="20"></span>
+                    <span class="text_span fw-600 text-center m-1">Content Tools</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- hide search bar and button search  -->
+        <div class="d-flex bg_div p-0 day_night_inp hidestart">
+            <input class="py-3 px-1 w_90 m-1 text_white day_night_light rounded-0 border-0 shadow-sm hidestart" type="text" placeholder="Enter a word to search">
+            <span class="srch_icon_bg w_10 m-1 shadow-sm c_p hidestart"><img class="d-block m-auto mt-3 hidestart" src="https://v1.smallseotools.com/webimages/search.svg" alt="icon" width="20" height="20"></span>
+        </div>
+        <!-- main log in form goes here -->
+        <div class="conatiner-fluid d-flex justify-content-center day_night_dark" id="outer_container">
+            <div class="col-lg-7 mt-4 border day_night_light col-md" id="inner_container">
+                <div class="row col-md col-sm">
+                    <div class="col-12">
+                        <div class="fs-6 heading_1 text-center fw-600 border-bottom py-3 mb-sm-3 text_white">Login</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center text_white fw-600">You can also sign up using your Facebook Account OR Google Account.</p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="btn-group text-center col-7 justify-content-center" id="btn_div">
+                        <button type="button" class="btn btn_fb fw-600 p-3 m-1 rounded"><img class="btn_img" src="https://v1.smallseotools.com/webimages/log-fb.svg" alt="fb_log_in">Login with facebook</button>
+                        <button type="button" class="btn btn_ggl fw-600 p-3 m-1 rounded"><img class="btn_img" src="https://v1.smallseotools.com/webimages/log-gmail.svg" alt="google">Login with google</button>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3">
+                    <div class="col-md-8 border-bottom"></div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3 p-3">
+                    <div class="col-md-7">
+                        <label class="fw-600 text_white" id="label1"> Name</label>
+                    </div>
+                    <div class="col-md-7 border py-2 d-flex b_l_i">
+                        <div class="email_img border-right">
+                            <img class="d-block m-auto mt-2 mx-3" src="https://v1.smallseotools.com/webimages/reg-email.svg" alt="email">
+                        </div>
+                        <input class="form-control b_l rounded-0 w-100" type="text" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3 p-3">
+                    <div class="col-md-7">
+                        <label class="fw-600 text_white" id="label1">Password</label>
+                    </div>
+                    <div class="col-md-7 border py-2 d-flex b_l_i">
+                        <div class="email_img border-right">
+                            <img class="d-block m-auto mt-2 mx-3" src="https://v1.smallseotools.com/webimages/reg-email.svg" alt="email">
+                        </div>
+                        <input class="form-control b_l rounded-0 w-100" type="text" placeholder="Enter your Password">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3 p-3">
+                    <div class="col-md-7">
+                        <label class="fw-600 text_white" id="label1">Confirm Password</label>
+                    </div>
+                    <div class="col-md-7 border py-2 d-flex b_l_i position-relative">
+                        <div class="email_img border-right">
+                            <img class="d-block m-auto mt-2 mx-3" src="https://v1.smallseotools.com/webimages/reg-lock.svg" alt="email">
+                        </div>
+                        <input class="form-control b_l rounded-0 w-100" type="text" placeholder="Confirm your Password">
+                        <img class="d-block position-absolute topend" src="https://v1.smallseotools.com/webimages/eye-off.svg" alt="eye">
+                    </div>
+                    <div class="col-md-7 mt-2 d-flex justify-content-end ">
+                        <span class="fw-600"><a class="text-danger" href="#">Forget Password?</a></span>
+                    </div>
+                    <div class="col-md-7 mt-4">
+                        <div class="col-md-5 col-md col-sm border d-flex justify-content-around align-items-center w-50 ">
+                            <div class="check_box m-2">
+                                <input class="large_check_box" type="checkbox" id="recap_check">
+                            </div>
+                            <div class="text_center m-2">
+                                <p><label for="recap_check text_white">I'm not a robot</label></p>
+                            </div>
+                            <div class="img_recaptcha d-grid m-2">
+                                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="robot" width="30" height="30">
+                                <p class="captcha m-0 text_white">Recaptcha</p>
+                                <span><a id="pri_term" title="title" href="#">Privacy</a>.<a id="pri_term1" title="title" href="#">Privacy</a></span>
+                            </div>
+                        </div>
+                        <button class="rounded-0 border-0 fw-600 login-btn w-100 p-3 mt-3 text_white">Signup</button>
+                        <p class="fw-600 mt-3 text_white" id="dont">Already have account? <a title="register" href="#" id="reg">Login</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- carousel  -->
+        <div class="owl-carousel owl-theme p-5">
+            <div class="item"><a title="carousel items" href="#"><img src="1.png" alt="carousel img" ></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="2.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="3.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="4.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="5.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="6.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="1.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="6.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="5.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="4.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="3.png" alt="carousel img"></a></div>
+            <div class="item"><a title="carousel items" href="#"><img src="2.png" alt="carousel img"></a></div>
+        </div>
+        <div class="container-fluid bg_gray">
+            <div class="row justify-content-center">
+                <div class="col-md-6 border py-3 m-3 bg_light shadow-sm">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11 py-4 border bg_white shadow-sm inner_card">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                    <img class="d-block hw40" src="Artwork 10.png" alt="artwork">
+                                </div>
+                                <div class="col-md-6 d-grid justify-content-center">
+                                    <div class="subscribe_heading">Subscribe to our newsletter & stay tuned</div>
+                                    <div class="py-0"><input class="py-2 w-100 fw-600 border" type="text" placeholder="Enter your email address.."></div>
+                                    <div class="text-center"><button class="py-2 w-50 fw-600 rounded-0 border-0 bg-success text-white" type="submit">SUBSCRIBE</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark text-white fw-600 text-center">COPY RIGHT RESERVED (2021 - 2030)</div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+            -->  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var open;
+            var close;
+                function show_tools(){
+                  open= !open;
+                  if(!open){
+                    $(".hide_tools").css({"display":"unset" })
+                }
+                else{
+                  $(".hide_tools").css("display","none")
+                }
+              }
+              function show_input(){
+                $(".search_bar_absolute").toggle();
+              }
+              
+              function daynight(){
+                close = !close;
+                if(!close){
+                
+                $(".round").css({"margin-left": "17px", "background":"red"});
+                $(".slider").css({ "background":"rgb(61, 61, 63)"});
+                $(".dn_btn").css({"background" : "#2a2a2e" , "color" : "white"});
+                $(".img img").attr("src","https://img.icons8.com/emoji/48/000000/crescent-moon-emoji.png");
+                $("#navbar_id , #inner_container , input[type=text] , #label1 , label2 , #recap_check , #keepme , .bg_input_div").css({"background" : "#3d3d3f" , "color" : "white"});
+                $("#dont").css({ "color" : "white"});
+                $("a").css({ "color" : "white"});
+                $(".img_sun").attr({"src":"https://www.google.com/search?q=png+sun+pic&sxsrf=ALeKk01YTpaHLyq8aU7ya8rdR25a35x69Q:1626421306952&tbm=isch&source=iu&ictx=1&fir=lal12NaUWl5tuM%252CySU40Dg3SuGCIM%252C_&vet=1&usg=AI4_-kRWS1SXUdP5_yCwpl2reV8zo9xsnw&sa=X&ved=2ahUKEwj5yYXCi-fxAhWgCWMBHZH_CzEQ9QF6BAgJEAE#imgrc=lal12NaUWl5tuM"});
+                $("#outer_container").css({"background" : "#2a2a2e" , "color" : "white"});
+                $(".heading_1").css({ "color" : "white"});
+                $(".dn_text").text("Dark Mode");
+                $(".owl-carousel").css({"background" : "#2a2a2e" , "color" : "white"});
+                $(".dark_inputs").css({"background" : "#2a2a2e" , "color" : "white"});
+                $(".b_l , .bg_gray , .inner_card").css({"background" : "#2a2a2e" , "color" : "white","fontSize" : "18px", "fontWeight":"600"});
+                $(".b_l1").css({"background" : "#2a2a2e" , "color" : "white","fontSize" : "18px", "fontWeight":"600"});
+                $(".bg_div").css({"background" : "#2a2a2e" , "color" : "white"});
+                $(".subscribe_menu").css({"background" : "#2a2a2e" , "color" : "white","fontSize" : "18px", "fontWeight":"600"});
+                $(".inner_subs").css({"background" : "#3d3d3f"  , "color" : "white","fontSize" : "18px", "fontWeight":"600"});
+                $(".b_l_i").css({"background" : "#2a2a2e" , "color" : "black","fontSize" : "18px", "fontWeight":"600"});
+               $(".bg_light").css({"background" : "#3d3d3f" , "color" : "white"});
+              }
+                else{
+                  $(".inner_card").css({"background" : "white" , "color" : "black"});
+                  $(".bg_light").css({"background" : "#eff4f9" , "color" : "black"});
+                  $(".b_l").css({"background" : "white" , "color" : "black","fontSize" : "18px", "fontWeight":"600"});
+                $(".round").css({"margin-left": "0px", "background":"white"});
+                $(".b_l_i").css({"background" : "white" , "color" : "black","fontSize" : "18px", "fontWeight":"600"});
+                $(".dn_btn").css({"background" : "white" , "color" : "black"});
+                $(".img img").attr("src","https://v1.smallseotools.com/webimages/day_mode.svg");
+                $(".slider").css({ "background":"rgb(182 187 193)"});
+                $("#navbar_id , #inner_container , input[type=text] , #label1 , label2 , #recap_check , #keepme , .bg_input_div").css({"background" : "white" , "color" : "black"});
+                $("#dont").css({ "color" : "black"});
+                $("a").css({ "color" : "black"});
+                $(".bg_div").css({"background" : "#f6f8fa" , "color" : "white"});
+                $(".img_sun").attr({"src":"https://www.google.com/search?q=png+sun+pic&sxsrf=ALeKk01YTpaHLyq8aU7ya8rdR25a35x69Q:1626421306952&tbm=isch&source=iu&ictx=1&fir=lal12NaUWl5tuM%252CySU40Dg3SuGCIM%252C_&vet=1&usg=AI4_-kRWS1SXUdP5_yCwpl2reV8zo9xsnw&sa=X&ved=2ahUKEwj5yYXCi-fxAhWgCWMBHZH_CzEQ9QF6BAgJEAE#imgrc=lal12NaUWl5tuM"});
+                $("#outer_container").css({"background" : "#f6f8fa" , "color" : "black"});
+                $(".heading_1").css({ "color" : "black"});
+                $(".owl-carousel").css({"background" : "white" , "color" : "black"});
+                $(".bg_gray").css({"background" : "rgb(223, 223, 223)" , "color" : "black"});
+                }
+              }
+              $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+            })
+        </script>
+    </body>
+</html>
